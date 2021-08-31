@@ -1,0 +1,52 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.spacer {
+		flex: 1 1 auto;
+	}
+
+	&__content {
+		width: 100%;
+		z-index: 1;
+		box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+		//border-radius: 25px;
+	}
+}
+
+mat-drawer-container {
+	// height: 70em;
+	height: calc(100vh - 4rem);
+	border-bottom-left-radius: inherit;
+	border-bottom-right-radius: inherit;
+}
+
+mat-toolbar {
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
+	height: 74px;
+	button[matbadgecolor='warn'] {
+		margin-right: 7px !important;
+	}
+}
+
+main {
+	padding: 1em;
+	overflow-y: auto;
+	height: calc(100% - 4%);
+}
+
+.welcome {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+
+	h1 {
+		color: red;
+		font-weight: bold;
+		font-size: 2em;
+	}
+}

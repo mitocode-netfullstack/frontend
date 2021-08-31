@@ -1,0 +1,74 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@igmh/components/*": [
+        "src/app/commons/components/*"
+      ],
+      "@igmh/classes/*": [
+        "src/app/commons/models/classes/*"
+      ],
+      "@igmh/interfaces/*": [
+        "src/app/commons/models/interfaces/*"
+      ],
+      "@igmh/services/*": [
+        "src/app/commons/services/*"
+      ],
+      "@igmh/shared/*": [
+        "src/app/commons/shared/*"
+      ],
+      "@igmh/pipes/*": [
+        "src/app/commons/pipes/*"
+      ],
+      "@igmh/business/maintenance-flow/*": [
+        "src/app/business/maintenance-flow/*"
+      ],
+      "@igmh/business/sales-flow/*": [
+        "src/app/business/sales-flow/*"
+      ],
+      "@igmh/business/querys-flow/*": [
+        "src/app/business/querys-flow/*"
+      ],
+      "@igmh/business/auth-flow/*": [
+        "src/app/business/auth-flow/*"
+      ],
+      "@igmh/environments/*": [
+        "src/environments/*"
+      ],
+      "@igmh/utils/*": [
+        "src/app/commons/utils/*"
+      ],
+      "@igmh/guards/*": [
+        "src/app/commons/guards/*"
+      ]
+    },
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2017",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

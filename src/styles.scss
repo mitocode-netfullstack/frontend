@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, 'Helvetica Neue', sans-serif;
+
+	/* Chrome, Safari, Edge, Opera */
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	mat-form-field .mat-form-field {
+		&-underline {
+			position: relative;
+			bottom: auto;
+		}
+		&-subscript-wrapper {
+			position: static;
+		}
+	}
+
+	/* Firefox */
+	input[type='number'] {
+		-moz-appearance: textfield;
+	}
+	.blur {
+		background: rgba(255, 255, 255, 0.2);
+		backdrop-filter: blur(8px);
+		height: 100vh;
+		width: 100%;
+		position: absolute;
+	}
+
+	.flex-column {
+		display: flex;
+		flex-direction: column;
+	}
+
+	/*Clases para el SnackBar*/
+	.mat-snack-bar-container {
+		color: white;
+		text-align: center;
+	}
+	.mat-simple-snackbar {
+		justify-content: center;
+		font-size: 1em;
+	}
+	.snackbar-error {
+		background-color: #e74c3c;
+	}
+
+	.snackbar-warning {
+		background-color: #f1c40f;
+	}
+
+	.snackbar-info {
+		background-color: #239b56;
+	}
+	/****************************/
+}

@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="container__content">
+        <h1>Categorias</h1>
+        <igmh-search [dataSource]="dataSource"></igmh-search>
+        <div class="mb-10" fxLayout="row" fxLayoutAlign="end center">
+            <button mat-raised-button color="primary" (click)="clickCreateCategorie()">
+                Agregar Nueva Categoría
+            </button>
+        </div>
+        <igmh-table *ngIf="dataTable" [dataTable]="dataTable" (dataSourceEvent)="dataTableDataSourceEvent($event)"
+            (editEvent)="editEvent($event)" (deleteEvent)="deleteEvent($event)"></igmh-table>
+    </div>
+</div>

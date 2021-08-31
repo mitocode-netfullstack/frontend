@@ -1,0 +1,22 @@
+.container {
+    @extend .flex-column;
+    width: 20em;
+    &__controls {
+      @extend .flex-column;
+      gap: 16px;
+      .photo {
+        @extend .flex-column;
+        align-items: center;
+        gap: 16px;
+        img {
+          max-width: 150px;
+        }
+      }
+    }
+  }
+  
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  

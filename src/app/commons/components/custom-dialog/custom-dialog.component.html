@@ -1,0 +1,23 @@
+<div class="dialog-content-wrapper">
+    <mat-toolbar matDialogTitle class="mat-primary m-0">
+        <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="start center">
+                <span *ngIf="title" class="title dialog-title">{{ title }}</span>
+            </div>
+            <button type="button" mat-icon-button [mat-dialog-close]="customDialogService.dataAfterClose"
+                aria-label="Close dialog">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div mat-dialog-content class="p-8 pb-0 m-10" *ngIf="showQuestion === false">
+        <ng-template #component></ng-template>
+    </div>
+
+    <div mat-dialog-actions *ngIf="showQuestion" class="panel-footer m-0 pr-0" fxLayout="row"
+        fxLayoutAlign="end center">
+        <button mat-button color="warn" [mat-dialog-close]="true" (click)="closeDialog()">Cancelar</button>
+        <button mat-flat-button color="primary" (click)="doAction()">Si</button>
+    </div>
+</div>

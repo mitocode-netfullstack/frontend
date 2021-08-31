@@ -1,0 +1,18 @@
+::ng-deep {
+    .mat-list-item-content {
+      display: flex;
+      align-items: flex-end;
+    }
+    .mat-list-text {
+      margin-left: 1em;
+    }
+  }
+  
+  .menu {
+    width: 20em;
+  }
+  
+  mat-icon {
+    color: #888383;
+  }
+  

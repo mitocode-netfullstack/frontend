@@ -1,0 +1,5 @@
+<mat-form-field class="search" appearance="outline" *ngIf="dataSource">
+	<mat-label>Filtro</mat-label>
+	<input matInput placeholder="Buscar" name="email" (keyup)="applyFilter($event)" autocomplete="off" />
+	<mat-icon matSuffix>search</mat-icon>
+</mat-form-field>

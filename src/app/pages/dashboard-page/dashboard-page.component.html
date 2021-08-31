@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="container__content">
+		<mat-toolbar color="primary">
+			<button mat-icon-button (click)="drawer.toggle()">
+				<mat-icon>menu</mat-icon>
+			</button>
+			<span>MitoCode Net Full Stack</span>
+
+			<span class="spacer"></span>
+			<button mat-icon-button>
+				<mat-icon>account_circle</mat-icon>
+			</button>
+		</mat-toolbar>
+		<mat-drawer-container>
+			<mat-drawer #drawer mode="side" opened>
+				<igmh-menu></igmh-menu>
+			</mat-drawer>
+
+			<main>
+				<div class="welcome" *ngIf="showWelcome">
+					<div>
+						<h1 class="text-animate">MitoCode Net Full Stack</h1>
+					</div>
+				</div>
+				<router-outlet></router-outlet>
+			</main>
+		</mat-drawer-container>
+	</div>
+</div>

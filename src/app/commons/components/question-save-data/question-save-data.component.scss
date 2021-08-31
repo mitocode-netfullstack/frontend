@@ -1,0 +1,15 @@
+.container {
+	display: flex;
+	flex-direction: column;
+
+	.container__actions {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.panel-footer {
+		border-top: 1px solid #ddd;
+		padding: 8px 15px;
+	} 
+}
+

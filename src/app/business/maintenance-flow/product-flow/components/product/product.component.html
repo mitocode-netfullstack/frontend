@@ -1,0 +1,28 @@
+<form class="container" [formGroup]="_productFlowService.formGroup" autocomplete="off">
+    <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput name="nombre" formControlName="productName" />
+        <mat-error *ngIf="_productFlowService.nameField.hasError('required')"> El nombre es requerido </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Categoria</mat-label>
+        <mat-select formControlName="categoryId">
+            <mat-option *ngFor="let item of listCategories" [value]="item.categoryId">{{ item.categoryName }}
+            </mat-option>
+        </mat-select>
+        <mat-error *ngIf="_productFlowService.categorieField.hasError('required')">Seleccione una categoria</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Precio Unitario</mat-label>
+        <input matInput name="precioUnitario" formControlName="productPrice" numeric [decimals]="2" type="number" />
+        <mat-error *ngIf="_productFlowService.priceField.hasError('required')">El precio es requerido</mat-error>
+    </mat-form-field>
+
+    <div class="container__controls">
+        <mat-checkbox color="primary" formControlName="productEnabled">¿Habilitado?</mat-checkbox>
+        <igmh-question-save-data [disabledButtonRegister]="_productFlowService.formGroup.invalid"
+            [showLoader]="_productFlowService.showLoader" (saveEvent)="registerProduct()"></igmh-question-save-data>
+    </div>
+</form>
